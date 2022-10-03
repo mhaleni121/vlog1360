@@ -1,0 +1,3 @@
+vlog/
+__pycache__/
+*.sqlite3
