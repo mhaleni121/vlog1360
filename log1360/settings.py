@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jqwv1sd3+3@==t!x&oa7i%%$m4p=_58xa@3f*u164zeqmrw!^6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['log1360.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -150,6 +150,7 @@ if os.getcwd() == '/app':
     # Allow all host headers.
     ALLOWED_HOSTS = ['log1360.herokuapp.com']
     DEBUG = False
+
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
