@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jqwv1sd3+3@==t!x&oa7i%%$m4p=_58xa@3f*u164zeqmrw!^6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['log1360.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -139,9 +139,8 @@ BOOTSTRAP3 = {
 # Heroku settings
 if os.getcwd() == '/app':
     import dj_database_url
-
     DATABASES = {
-        'default': dj_database_url.config(default='postgres://localhost')
+    'default': dj_database_url.config(default='postgres://localhost')
     }
 
     # Honor the 'X-Forwarded-Proto' header for request.is_secure().
@@ -150,11 +149,9 @@ if os.getcwd() == '/app':
     # Allow all host headers.
     ALLOWED_HOSTS = ['log1360.herokuapp.com']
     DEBUG = False
-
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
-
